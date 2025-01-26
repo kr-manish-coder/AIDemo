@@ -94,11 +94,3 @@ Contributions are welcome! Feel free to open issues or submit pull requests.
 
 **Author**: Manish  
 For questions or support, feel free to reach out at `mailme.manishverma@gmail.com`.
-
----
-
-### Notes
-- Replace `<repository-url>` with the actual Git repository URL of your project.
-- Update `[your-email@example.com]` with your email or preferred method of contact.
-
-Let me know if you want me to help you save this file in the project directory! 😊
