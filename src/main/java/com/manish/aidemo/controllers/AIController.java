@@ -1,10 +1,7 @@
 package com.manish.aidemo.controllers;
 
 import org.springframework.ai.ollama.OllamaChatModel;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
 
 @RestController
@@ -18,7 +15,14 @@ public class AIController {
     }
 
     @GetMapping("/prompt")
-    public Flux<String> chatbot(@RequestParam("prompt") String prompt){
+    public Flux<String> prompt(@RequestParam("prompt") String prompt){
         return client.stream(prompt);
     }
+
+    @PostMapping("/chatbot")
+    public Flux<String> chatbot(@RequestBody String prompt){
+        return client.stream(prompt);
+    }
+
+
 }
